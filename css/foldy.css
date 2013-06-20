@@ -1,0 +1,237 @@
+/*------------------------------------------------------------
+
+	Style.css
+
+	Created by:	Dave Rupert
+	Contact:		http://github.com/davatron5000/foldy960
+
+	Copyright 2012
+	License:	  WTFPL + "Not going to maintain this because
+              the rent is too damn high licence."
+
+--------------------------------------------------------------*/
+/* Responsive Resets
+-------------------------------------------------------------- */
+@-o-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+/* line 26, ../_sass/foldy.scss */
+html {
+  overflow-y: auto;
+}
+
+/* line 33, ../_sass/foldy.scss */
+img,
+audio,
+video,
+canvas {
+  max-width: 100%;
+}
+
+/* Grid > 6 Column Mobile First
+-------------------------------------------------------------- */
+/* line 39, ../_sass/foldy.scss */
+.container {
+  /*
+    The `max-width` property is the width governer. I dare you to experiment
+    with setting this larger, something like 1280px.
+  */
+  max-width: 1280px;
+  width: 92%;
+  margin: 0px auto;
+  position: relative;
+}
+
+/* line 50, ../_sass/foldy.scss */
+.row {
+  clear: both;
+}
+
+@media screen and (min-width: 480px) {
+  /* line 55, ../_sass/foldy.scss */
+  .container {
+    width: 98%;
+  }
+
+  /* line 67, ../_sass/foldy.scss */
+  .grid-1,
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .grid-6,
+  .grid-half,
+  .grid-full,
+  .grid-unit {
+    float: left;
+    width: 96.969696969697%;
+    margin: 0 1.515151515152% 1em;
+  }
+
+  /* line 74, ../_sass/foldy.scss */
+  .gallery .grid-unit,
+  .grid-half {
+    width: 46.969696969697%;
+    margin: 0 1.515151515152% 1em;
+  }
+
+  /* line 79, ../_sass/foldy.scss */
+  .grid-flow-opposite {
+    float: right;
+  }
+}
+@media screen and (min-width: 640px) {
+  /* line 86, ../_sass/foldy.scss */
+  .grid-1 {
+    width: 13.636363636364%;
+  }
+
+  /* line 87, ../_sass/foldy.scss */
+  .grid-2 {
+    width: 30.30303030303%;
+  }
+
+  /* line 89, ../_sass/foldy.scss */
+  .grid-3,
+  .grid-half {
+    width: 46.969696969697%;
+  }
+
+  /* line 90, ../_sass/foldy.scss */
+  .grid-4 {
+    width: 63.636363636364%;
+  }
+
+  /* line 91, ../_sass/foldy.scss */
+  .grid-5 {
+    width: 80.30303030303%;
+  }
+
+  /* line 93, ../_sass/foldy.scss */
+  .grid-6,
+  .grid-full {
+    width: 96.969696969697%;
+  }
+
+  /* line 95, ../_sass/foldy.scss */
+  .gallery .grid-unit {
+    width: 30.30303030303%;
+  }
+
+  /* line 99, ../_sass/foldy.scss */
+  .content-pad-right {
+    padding-right: 4%;
+    /* Use (or don't) as necessary. */
+  }
+
+  /* line 103, ../_sass/foldy.scss */
+  .content-pad-left {
+    padding-left: 4%;
+  }
+}
+/* Micro Clearfix - http://nicolasgallagher.com/micro-clearfix-hack/
+For best results, use your favorite clearfix here.
+-------------------------------------------------------------- */
+/* line 112, ../_sass/foldy.scss */
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+
+/* line 113, ../_sass/foldy.scss */
+.cf:after {
+  clear: both;
+}
+
+/* line 114, ../_sass/foldy.scss */
+.cf {
+  zoom: 1;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+/* Layout
+-------------------------------------------------------------- */
+/* line 118, ../_sass/foldy.scss */
+body {
+  font: 100%/1.5 sans-serif;
+}
+
+/* line 122, ../_sass/foldy.scss */
+section {
+  margin-bottom: 2em;
+}
+
+/* line 126, ../_sass/foldy.scss */
+footer {
+  font-size: 0.9em;
+  border-top: 1px solid #ccc;
+  padding: 0.5em 0 2.5em;
+}
+
+/* Typography
+-------------------------------------------------------------- */
+/* line 134, ../_sass/foldy.scss */
+.heading {
+  font-size: 3em;
+  margin: 0;
+}
+
+/* line 139, ../_sass/foldy.scss */
+.sub-heading {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+/* line 144, ../_sass/foldy.scss */
+a {
+  color: #0066cc;
+}
+
+/* line 149, ../_sass/foldy.scss */
+a:focus,
+a:hover {
+  color: #003399;
+}
+
+/* Elements
+-------------------------------------------------------------- */
+/* line 155, ../_sass/foldy.scss */
+figure {
+  margin: 0;
+  background: #f8f8f8;
+}
+
+/* line 160, ../_sass/foldy.scss */
+figcaption {
+  padding: 0.5em 1em 1em;
+  font-size: 0.875em;
+}
+
+/* line 165, ../_sass/foldy.scss */
+code {
+  padding: 0.5em;
+  background: #efefef;
+}
+
+/* Helpers
+-------------------------------------------------------------- */
+/* line 172, ../_sass/foldy.scss */
+.show-grid div[class*='grid-'] {
+  background-color: #eee;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  padding: 0.5em 1em;
+  margin-bottom: 1em;
+  text-align: center;
+}

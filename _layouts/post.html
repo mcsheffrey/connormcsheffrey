@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  {% include head.html %}
+  <body class="post">
+    <div class="wrapper">
+      {% include nav.html %}
+      <div class="post-header" style="background-image: url(/img/{{ page.header-image }});">
+          <img src="/img/{{ page.header-image }}" alt="Hello World">
+          <h1 class="post-title">{{ page.title }}</h1>
+          {% if page.previous.url %} 
+            <a href="{{ page.previous.url }} " class="hero-nav hero-prev ir" id="hero-prev">Previous</a>
+          {% endif %}
+          {% if page.next.url %} 
+            <a href="{{ page.next.url }} " class="hero-nav hero-next ir" id="hero-next">Next</a>
+          {% endif %}
+      </div>
+
+      <div class="content">
+        <div class="container">
+          {{ content }}
+        </div>
+
+<!--    <article class="art {% unless page.header-image %}simple{% endunless %}">
+          <header class="art-header {% if page.header-image %} white" style="background-image: url(/public/img/articles/{{ page.header-image }}) {% endif %}">
+            <div class="art-header-inner">
+              <time class="art-time">{{ page.date | date: "%B %d, %Y" }}</time>
+              <h2 class="art-title">{{ page.title }}</h2>
+              <p class="art-subtitle">{{ page.subtitle }}</p>
+            </div>
+          </header>
+          <div class="art-body">
+            <div class="art-body-inner">
+              
+            </div>
+          </div>
+        </article> -->
+      </div>
+      {% include footer.html %}
+    </div>
+  </body>
+</html>
