@@ -111,7 +111,7 @@ textarea {
 .ss-facebook:before,.ss-facebook.right:after{content:''}.ss-twitter:before,.ss-twitter.right:after{content:''}.ss-linkedin:before,.ss-linkedin.right:after{content:''}.ss-googleplus:before,.ss-googleplus.right:after{content:''}.ss-tumblr:before,.ss-tumblr.right:after{content:''}.ss-wordpress:before,.ss-wordpress.right:after{content:''}.ss-blogger:before,.ss-blogger.right:after{content:''}.ss-posterous:before,.ss-posterous.right:after{content:''}.ss-youtube:before,.ss-youtube.right:after{content:''}.ss-vimeo:before,.ss-vimeo.right:after{content:''}.ss-flickr:before,.ss-flickr.right:after{content:''}.ss-instagram:before,.ss-instagram.right:after{content:''}.ss-pinterest:before,.ss-pinterest.right:after{content:''}.ss-dribbble:before,.ss-dribbble.right:after{content:''}.ss-behance:before,.ss-behance.right:after{content:''}.ss-github:before,.ss-github.right:after{content:''}.ss-octocat:before,.ss-octocat.right:after{content:''}.ss-paypal:before,.ss-paypal.right:after{content:''}.ss-foursquare:before,.ss-foursquare.right:after{content:''}.ss-skype:before,.ss-skype.right:after{content:''}.ss-rdio:before,.ss-rdio.right:after{content:''}.ss-spotify:before,.ss-spotify.right:after{content:''}.ss-lastfm:before,.ss-lastfm.right:after{content:''}.ss-mail:before,.ss-mail.right:after{content:'✉'}.ss-like:before,.ss-like.right:after{content:'👍'}.ss-rss:before,.ss-rss.right:after{content:''}
 
 /* ==========================================================================
-   Sass Extensions
+   SASS Extensions
    ========================================================================== */
 
 .ease-in-out {
@@ -287,66 +287,64 @@ img {
   }
 }
 
-.header-nav {
+
+.header-nav  {
   float: right;
+  list-style: none;
   margin: 30px 0 0 0;
+  padding: 0;
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  li {
+    float: left;
+    margin: 0 20px 0 0;
+    padding: 0 20px 0 0;
+    position: relative;
 
-    li {
-      float: left;
-      margin: 0 20px 0 0;
-      padding: 0 20px 0 0;
-      position: relative;
-
-      a {
-        color: #353535;
-        font-family: "proxima-nova", Helvetica, Arial, Sans-serif;
-        font-size: 2em;
-        font-weight: 200;
-        text-decoration: none;
-      }
-
-      &.active a {
-        text-decoration: line-through;
-      }
-
-      // Nav Divider
-      &:first-child:after {
-        border-right: 1px solid #d6d6d6;
-        content: "";
-        display: block;
-        height: 50px;
-        font-size: 36px;
-        margin: 0 0 20px 0;
-        -webkit-transform: rotate(25deg);
-           -moz-transform: rotate(25deg);
-            -ms-transform: rotate(25deg);
-             -o-transform: rotate(25deg);
-                transform: rotate(25deg);
-        position: absolute;
-        right: 0;
-        top: -15px;
-      }
-
-      &:last-child {
-        margin: 0;
-        padding: 0;
-      }
+    a {
+      color: #353535;
+      font-family: "proxima-nova", Helvetica, Arial, Sans-serif;
+      font-size: 2em;
+      font-weight: 200;
+      text-decoration: none;
     }
-  }
 
-  ul:hover li a {
-    text-decoration: none;
-
-    &:hover {
+    &.active a {
       text-decoration: line-through;
+    }
+
+    // Nav Divider
+    &:first-child:after {
+      border-right: 1px solid #d6d6d6;
+      content: "";
+      display: block;
+      height: 50px;
+      font-size: 36px;
+      margin: 0 0 20px 0;
+      -webkit-transform: rotate(25deg);
+         -moz-transform: rotate(25deg);
+          -ms-transform: rotate(25deg);
+           -o-transform: rotate(25deg);
+              transform: rotate(25deg);
+      position: absolute;
+      right: 0;
+      top: -15px;
+    }
+
+    &:last-child {
+      margin: 0;
+      padding: 0;
     }
   }
 }
+
+.header-nav:hover li a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: line-through;
+  }
+}
+
 
 body.default .header nav li:first-child a {
   text-decoration: line-through;
@@ -393,18 +391,15 @@ body.post .header nav li:last-child a {
   }
 }
 
-
-
-
 .headline-wrap {
-    left: 0;
-    top: 42%;
-    right: 0;
-    position: absolute;
+  left: 0;
+  top: 42%;
+  right: 0;
+  position: absolute;
 
-    @media only screen and (max-width : 480px) {
-        top: 35%;
-    }  
+  @media only screen and (max-width : 480px) {
+      top: 35%;
+  }  
 }
 
 .home-header h1 {
