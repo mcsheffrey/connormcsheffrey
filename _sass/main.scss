@@ -150,6 +150,12 @@ p a {
     }
 }
 
+blockquote {
+  p {
+    font-size: 22px;
+  }
+}
+
 body.work {
     text-align: center;
 }
@@ -166,6 +172,61 @@ body.work {
     right: 0;
     top: 0;
     z-index: 200;
+}
+
+// btn
+.btn {
+  background: none;
+  box-shadow: 0 0 0;
+  border: 1px solid #adadad;
+  border-radius: 1em;
+  color: #adadad;
+  line-height: 1em;
+  padding: 8px 38px 8px 15px;
+  position: relative;
+  text-shadow: 0 0 0;
+  -webkit-transition: all 200ms ease-in-out; 
+     -moz-transition: all 200ms ease-in-out; 
+      -ms-transition: all 200ms ease-in-out; 
+       -o-transition: all 200ms ease-in-out; 
+          transition: all 200ms ease-in-out; /* easeInOutQuint */
+
+  &::after {
+    border-top: 1px solid #adadad;
+    border-right: 1px solid #adadad;
+    content: " ";
+    display: block;
+    height: 8px;
+    position: absolute;
+    right: 17px;
+    top: 10px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transition: all 200ms ease-in-out; 
+       -moz-transition: all 200ms ease-in-out; 
+        -ms-transition: all 200ms ease-in-out; 
+         -o-transition: all 200ms ease-in-out; 
+            transition: all 200ms ease-in-out; /* easeInOutQuint */
+    width: 8px;
+  }
+
+  &:hover {
+    background: none;
+    border-color: #333;
+    color: #333;
+    -webkit-transition: all 200ms ease-in-out; 
+       -moz-transition: all 200ms ease-in-out; 
+        -ms-transition: all 200ms ease-in-out; 
+         -o-transition: all 200ms ease-in-out; 
+            transition: all 200ms ease-in-out; /* easeInOutQuint */
+
+    &::after {
+      border-color: #333;
+    }
+  }
 }
 
 #header {
@@ -322,6 +383,11 @@ img {
         font-size: 18px;
         opacity: .5;
         margin-top: 8px;
+        -webkit-transition: all 200ms ease-in-out; 
+           -moz-transition: all 200ms ease-in-out; 
+            -ms-transition: all 200ms ease-in-out; 
+             -o-transition: all 200ms ease-in-out; 
+                transition: all 200ms ease-in-out; /* easeInOutQuint */
 
         & + a {
             margin-left: 10px;
@@ -359,6 +425,7 @@ img {
         opacity: 0;
     }
 }
+
 
 .home-header {
   margin-bottom: 25px;
