@@ -1,7 +1,23 @@
 <div class="container">
+	<div class="span12">
+		<div class="footer-nav">
+	    {% if page.previous.url %} 
+	      <!-- <a href="{{ page.previous.url }} ">Previous</a>  -->
+	    {% endif %}
+	    {% if page.previous.url and page.next.url %} 
+	     / 
+	    {% endif %}
+	    {% if page.next.url %} 
+	      <!-- <a href="{{ page.next.url }} ">Next</a>  -->
+	    {% endif %}
+	    &nbsp;
+	  </div>
+	</div>
+</div>
+<div class="container">
   <hr>
   <footer>
-    <p class="left">&copy; Connor McSheffrey. Powered by Jekyll.</p>
+    <p class="left">&copy; Connor McSheffrey.</p>
     <div class="right social-nav"><a class="ss-twitter" href="http://www.twitter.com/mcsheffrey"></a><a class="ss-instagram" href="http://www.instagram.com/connor"></a><a class="ss-dribbble" href="http://dribbble.com/mcsheffrey"></a><a class="ss-octocat" href="http://github.com/mcsheffrey"></a></div>
   </footer>
 </div>
@@ -22,7 +38,7 @@
 <script src="/js/main.js"></script>
 
 <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    var _gaq=[['_setAccount','UA-9713110-1'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));
