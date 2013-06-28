@@ -19,24 +19,12 @@
       </div>
 
       <div class="content">
-        <div class="container">
+        <article class="container">
           {{ content }}
-        </div>
-
-<!--    <article class="art {% unless page.header-image %}simple{% endunless %}">
-          <header class="art-header {% if page.header-image %} white" style="background-image: url(/public/img/articles/{{ page.header-image }}) {% endif %}">
-            <div class="art-header-inner">
-              <time class="art-time">{{ page.date | date: "%B %d, %Y" }}</time>
-              <h2 class="art-title">{{ page.title }}</h2>
-              <p class="art-subtitle">{{ page.subtitle }}</p>
-            </div>
-          </header>
-          <div class="art-body">
-            <div class="art-body-inner">
-              
-            </div>
+          <div class="span12 text-center">
+            <time datetime="{{ page.date | date: "%B %d, %Y" }}" class="art-time">Posted on {{ page.date | date: "%B %d, %Y" }}</time>
           </div>
-        </article> -->
+        </article>
       </div>
       {% include footer.html %}
     </div>
